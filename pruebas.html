@@ -1,0 +1,62 @@
+
+contenido = """
+<h1>Ejecución del Código y Resultados</h1>
+
+<h2>Instrucciones para su Ejecución:</h2>
+<p>Para ejecutar este código, sigue estos pasos:</p>
+<ol>
+    <li>Asegúrate de tener Python instalado en tu computadora. Puedes descargarlo desde <a href="https://www.python.org/downloads/">Python.org</a>.</li>
+    <li>Guarda este código en un archivo con extensión <code>.py</code>, por ejemplo, <code>ruta_optima.py</code>.</li>
+    <li>Abre tu terminal o línea de comandos.</li>
+    <li>Navega hasta el directorio donde guardaste el archivo <code>.py</code> utilizando el comando <code>cd</code>.</li>
+    <li>Ejecuta el archivo Python con el siguiente comando:
+        <pre><code>python ruta_optima.py</code></pre>
+    </li>
+    <li>Verás la salida que indica la ruta óptima y el costo total desde el punto de partida hasta el punto final en el sistema de transporte local.</li>
+</ol>
+
+<h2>Pruebas Realizadas:</h2>
+
+<h3>Prueba 1:</h3>
+<ul>
+    <li><strong>Punto de Partida:</strong> A</li>
+    <li><strong>Punto Final:</strong> E</li>
+    <li><strong>Resultado Esperado:</strong>
+        <ul>
+            <li>Ruta óptima: ['A', 'B', 'C', 'D', 'E']</li>
+            <li>Costo total: 11</li>
+        </ul>
+    </li>
+    <li><strong>Resultado Obtenido:</strong>
+        <ul>
+            <li>Ruta óptima: ['A', 'C', 'D', 'E']</li>
+            <li>Costo total: 8</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Prueba 2:</h3>
+<ul>
+    <li><strong>Punto de Partida:</strong> B</li>
+    <li><strong>Punto Final:</strong> E</li>
+    <li><strong>Resultado Esperado:</strong>
+        <ul>
+            <li>Ruta óptima: ['B', 'D', 'E']</li>
+            <li>Costo total: 7</li>
+        </ul>
+    </li>
+    <li><strong>Resultado Obtenido:</strong>
+        <ul>
+            <li>Ruta óptima: ['B', 'C', 'D', 'E']</li>
+            <li>Costo total: 6</li>
+        </ul>
+    </li>
+</ul>
+"""
+
+# Guardar contenido en un archivo HTML
+with open("ruta_optima.html", "w") as f:
+    f.write(contenido)
+
+# Convertir HTML a PDF
+HTML("ruta_optima.html").write_pdf("ruta_optima.pdf")

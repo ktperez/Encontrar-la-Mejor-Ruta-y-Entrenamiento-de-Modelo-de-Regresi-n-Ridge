@@ -1,0 +1,8 @@
+Origen,Destino,Costo
+A,B,5
+A,C,3
+B,C,1
+B,D,4
+C,D,2
+C,E,6
+D,E,3
